@@ -1,0 +1,163 @@
+/* font-family: 'Fraunces',serif;
+font-family: 'Montserrat',sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+  margin: 28px auto;
+  padding: 0 14px;
+}
+
+.grid {
+  max-width: 605px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-img .image-product-desktop {
+  width: 100%;
+  max-width: 100%;
+  display: inherit;
+}
+
+.image-product-mobile {
+  display: none;
+}
+
+.card-content {
+  padding: 32px 31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.types {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 12px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 33px;
+  line-height: 32.3px;
+  color: hsl(212, 21%, 14%);
+}
+
+.description {
+  color: hsl(228, 12%, 48%);
+  line-height: 22px;
+  font-size: 14.3px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+.current-price {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 32px;
+}
+
+.old-price {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 13px;
+  padding-left: 18px;
+}
+
+button.btn {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  padding: 14px 0;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+
+button.btn:hover {
+  background-color: hsl(158, 36%, 22%);
+}
+
+button.btn img {
+  padding-right: 9px;
+}
+
+@media only screen and (max-width: 510px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-product-mobile {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card-img .image-product-desktop {
+    display: none;
+  }
+
+  .card-content {
+    padding: 22px 23px;
+  }
+
+  .types,
+  h1,
+  .description,
+  .price {
+    padding-bottom: 17.5px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-product-mobile {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card-img .image-product-desktop {
+    display: none;
+  }
+
+  .card-content {
+    padding: 22px 23px;
+  }
+
+  .types,
+  h1,
+  .description,
+  .price {
+    padding-bottom: 17.5px;
+  }
+}
